@@ -5,7 +5,7 @@ using System.Text;
 
 namespace gitTest
 {
-    //enum AllList
+    //enumeration exp
     public enum TimeOfDay
     {
         morning = 0, 
@@ -15,8 +15,38 @@ namespace gitTest
     //enum ends here
 
 
-    //class inhret
 
+
+    //class inhret
+    class Fruit
+    {
+        string placeOfProduced;
+
+        //construct function without any attribute
+        public Fruit(){
+            placeOfProduced = "USA";
+            Console.WriteLine("Fruit constructed");
+        }
+
+        //construct funtion with attribute
+        public Fruit(string _placeOfProduced)
+        {
+            placeOfProduced = _placeOfProduced;
+            Console.WriteLine("Fruit constructed");
+        }
+    }
+
+    class TropicalFruit : Fruit
+    {
+        //construct a base class first
+        public TropicalFruit() { Console.WriteLine("TropicalFruit constructed"); 
+        }
+
+        //inhret construct function of base class using "base(_string)" to 
+        public TropicalFruit(string _placeOfProduced)
+            : base(_placeOfProduced)
+        { }
+    }
     //class inhret ends here
 
     
@@ -25,6 +55,8 @@ namespace gitTest
     {
         static void Main(string[] args)
         {
+            TropicalFruit tf = new TropicalFruit();
+
             int[] a = {1,2,3,4 };
             foreach (int i in a)
                 //usage of 'foreach'
