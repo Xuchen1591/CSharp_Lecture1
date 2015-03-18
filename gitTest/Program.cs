@@ -12,6 +12,12 @@ namespace gitTest
         noon = 1,
         evening = 2
     }
+    //enum ends here
+
+
+    //class inhret
+
+    //class inhret ends here
 
     
 
@@ -37,6 +43,12 @@ namespace gitTest
                     break;
                 case TimeOfDay.noon:
                     Console.WriteLine("GOOd noon");
+                    break;
+                case TimeOfDay.evening:
+                    Console.WriteLine("GOOd evening");
+                    break;
+                default:
+                    Console.WriteLine("hello");
                     break;
             }
         }
